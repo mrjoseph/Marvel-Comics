@@ -1,0 +1,9 @@
+type Character {
+    code: Int,
+    status: String,
+}
+
+type Query {
+  helloWorld: String!
+  characters: Character!
+}
