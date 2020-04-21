@@ -7,8 +7,8 @@ import compression from 'compression';
 import cors from 'cors';
 import  PersonalizationAPI, { IDataSources } from './dataSource';
 import schema from './schema';
+require('dotenv').config()
 const app = express();
-
 const server = new ApolloServer({
   schema,
   validationRules: [depthLimit(7)],
