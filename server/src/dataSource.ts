@@ -2,15 +2,17 @@ import { RESTDataSource, RequestOptions } from 'apollo-datasource-rest';
 var md5 = require('md5');
 
 interface IMarvelAPI {
-    getMovie(id: string): any;
+    getCharacter(id: string): any
+    getCharacters(args: ICharacterParams): any
   };
+
+type ICharacterParams = {
+    offset: number
+    limit: number
+}
 
 export interface IDataSources {
 	marvelApi: IMarvelAPI;
-}
-
-interface ICharacterParams {
-    offset: number
 }
 
 class PersonalizationAPI extends RESTDataSource {
@@ -25,9 +27,10 @@ class PersonalizationAPI extends RESTDataSource {
     }
 
     async getCharacters(args:ICharacterParams) {
-        const { offset } = args;
+        const { offset, limit } = args;
         return await this.get('characters', {
-            offset
+            offset,
+            limit
         })
     }
     async getCharacter(id:string) {

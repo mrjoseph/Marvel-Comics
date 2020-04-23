@@ -1,5 +1,20 @@
 import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
+  root: {
+    boxShadow: "none",
+    backgroundColor: "#000000" ,
+    textAlign: "center",
+    flexGrow: 1,
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+  },
+  title: {
+    flexGrow: 1,
+  },
+    link: {
+        textDecoration: 'none'
+    },
     icon: {
       marginRight: theme.spacing(2),
     },
