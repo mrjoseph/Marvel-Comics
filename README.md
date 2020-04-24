@@ -15,12 +15,12 @@
 
 I took the opportunity to learn some new tech:
 
-* [Reactjs] - JavaScript library for building user interfaces!
-* [Apollo] - Open-source, spec-compliant GraphQL server
-* [node.js] - Evented I/O for the backend
-* [Express] - Fast node.js network app framework [@tjholowaychuk]
-* [Nextjs] - Build server side rendered React apps
-* [MaterialUI] - React components for faster and easier web development. Build your own design system, or start with Material Design
+* [Reactjs](https://reactjs.org/) - JavaScript library for building user interfaces!
+* [Apollo](https://www.apollographql.com/docs/apollo-server/) - Open-source, spec-compliant GraphQL server
+* [node.js](http://nodejs.org) - Evented I/O for the backend
+* [Express](http://expressjs.com) - Fast node.js network app framework [@tjholowaychuk]
+* [Nextjs](https://nextjs.org/docs/getting-started) - Build server side rendered React apps
+* [MaterialUI](https://material-ui.com/) - React components for faster and easier web development. Build your own design system, or start with Material Design
 
 
 
@@ -47,20 +47,18 @@ $ yarn dev
 
 ### Todos
 
- - Write MORE Tests. 
- I wanted to focus more on learning to combine Apollo with NextJS and Material UI for this task. Testing libraries I would like to learn include Cypress, React Testing Library
- - Clean up duplication 
- - Fix server side rendering of query
- - Set up a CI CD and AWS to gain experience and exposure for future projects
+ * Write MORE Tests. 
+ * wanted to focus more on learning to combine Apollo with NextJS and Material UI for this task. Testing libraries I would like to learn include Cypress, React Testing Library
+ * Clean up duplication 
+ * Fix server side rendering of query
+ * Set up a CI CD and AWS to gain experience and exposure for future projects
  
 
 
-   [node.js]: <http://nodejs.org>
-   [Nextjs]: <https://nextjs.org/docs/getting-started>
-   [express]: <http://expressjs.com>
-   [Reactjs]: <https://reactjs.org/>
-   [Apollo]: <https://www.apollographql.com/docs/apollo-server/>
-   [MaterialUI]: <https://material-ui.com/>
+
+
+
+
 
 
 -- 
