@@ -29,7 +29,7 @@ I took the opportunity to learn some new tech:
 This project requires [Node.js](https://nodejs.org/) v6+ to run.
 This project uses a GraphQL Apollo server to talk directly to the Marvel Comics API
 
-You will need to run the client and server in separate terminals.
+You will need to run the client and server in separate terminals
 
 Open a new terminal or tab
 ```sh
@@ -47,8 +47,8 @@ $ yarn dev
 
 ### Todos
 
-* Write MORE Tests. 
-* wanted to focus more on learning to combine Apollo with NextJS and Material UI for this task. Testing libraries I would like to learn include Cypress, React Testing Library
+* Write Tests!. 
+wanted to focus more on learning to combine Apollo with NextJS and Material UI for this task. Testing libraries I would like to learn include Cypress, React Testing Library
 * Clean up duplication 
 * Fix server side rendering of query
 * Set up a CI CD and AWS to gain experience and exposure for future projects
