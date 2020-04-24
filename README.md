@@ -29,7 +29,8 @@ I took the opportunity to learn some new tech:
 This project requires [Node.js](https://nodejs.org/) v6+ to run.
 This project uses a GraphQL Apollo server to talk directly to the Marvel Comics API
 
-You will need to run the client and server in separate terminals
+You will need to run the client and server in separate terminals.
+
 Open a new terminal or tab
 ```sh
 $ cd server
