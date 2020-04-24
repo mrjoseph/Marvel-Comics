@@ -15,6 +15,7 @@ export default withApollo(
   ({ initialState }) =>
     new ApolloClient({
       link: link,
+      ssrMode: true,
       cache: new InMemoryCache()
         .restore(initialState || {})
     })

@@ -7,7 +7,13 @@ type Query {
   series:String,
   events:String,
   ): CharacterDataWrapper!
-  
+
+  search(
+  offset:Int,
+  limit:Int,
+  nameStartsWith: String,
+  ): CharacterDataWrapper!
+
   character(id:String): CharacterDataWrapper!
 }
 

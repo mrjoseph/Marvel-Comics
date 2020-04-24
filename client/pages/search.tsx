@@ -5,14 +5,14 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import { Copyright } from '../src/Copyright';
-import List from '../src/List';
+import SearchList from '../src/SearchList';
 import useStyles from '../src/styles';
 import Logo from '../src/Logo';
 import { SearchBarComponent } from '../src/Search';
 
 
 
-const Index = () => {
+const Search = () => {
   const classes = useStyles();
   return (
     <React.Fragment>
@@ -34,7 +34,7 @@ const Index = () => {
             <SearchBarComponent />
           </Container>
         </div>
-      <List />
+      <SearchList />
       </main>
       <footer className={classes.footer}>
         <Copyright />
@@ -43,4 +43,4 @@ const Index = () => {
   );
 }
 
-export default Index;
+export default Search;

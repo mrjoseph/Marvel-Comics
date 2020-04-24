@@ -7,9 +7,9 @@ import useStyles from './styles';
 
 import CharacterList from './CharacterList';
 import { PaginationWrapper } from './PaginationWrapper';
-const CHARACTERS_LIST_QUERY = gql`
-query Characters($offset: Int, $limit:Int){
-  characters(offset:$offset, limit:$limit) {
+const CHARACTERS_SEARCH_LIST_QUERY = gql`
+query Search($offset: Int, $limit:Int, $nameStartsWith:String){
+  search(offset:$offset, limit:$limit, nameStartsWith:$nameStartsWith) {
     data {
         count
         total
@@ -27,9 +27,9 @@ query Characters($offset: Int, $limit:Int){
 }
 `;
 
-const List = () => {
+const SearchList = () => {
 	const limit = 60;
-	let initialOffSet = 0;
+	
 	const router = useRouter();
 	const classes = useStyles();
 	const [currentPageNumber, setQueryPage] = useState(1);
@@ -44,12 +44,13 @@ const List = () => {
 			setQueryPage(parseInt(pageNumber) || 0)
 		}
 	}, [router]);
-	if(currentPageNumber > 1) initialOffSet = (currentPageNumber - 1) * 60;
-	const { loading, error, data, fetchMore } = useQuery(CHARACTERS_LIST_QUERY,  {
+
+	const { loading, error, data, fetchMore } = useQuery(CHARACTERS_SEARCH_LIST_QUERY,  {
 			notifyOnNetworkStatusChange: true,
 			variables: { 
-					offset: initialOffSet, 
-					limit 
+					offset: 0, 
+					limit,
+					nameStartsWith: router.query.nameStartsWith
 			},
 	}); 
 
@@ -89,4 +90,4 @@ const List = () => {
 	)
 }
 
-export default List
+export default SearchList

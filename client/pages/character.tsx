@@ -85,12 +85,11 @@ const {
     items: eventItems
   },
   comics: { 
-    items 
+    items: comicsItems
   }, 
   name,
   id 
 } = results[0];
-console.log(items)
   return (
     <Fragment>
       <CssBaseline />
@@ -116,7 +115,7 @@ console.log(items)
       <ListItems name="Events" category={eventItems} type="Events" id={id} />
         </Grid>
         <Grid item xs={12} sm={4}>
-        <ListItems name="Comics" category={eventItems} type="Comics" id={id} />
+        <ListItems name="Comics" category={comicsItems} type="Comics" id={id} />
         </Grid>
       </Grid>
       </Container>

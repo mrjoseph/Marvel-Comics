@@ -4,11 +4,13 @@ var md5 = require('md5');
 interface IMarvelAPI {
     getCharacter(id: string): any
     getCharacters(args: ICharacterParams): any
+    search(args: ICharacterParams): any
   };
 
 type ICharacterParams = {
     offset: number
     limit: number
+    nameStartsWith: string
 }
 
 export interface IDataSources {
@@ -16,7 +18,7 @@ export interface IDataSources {
 }
 
 class PersonalizationAPI extends RESTDataSource {
-    baseURL = `http://gateway.marvel.com/v1/public/`;
+    baseURL = `https://gateway.marvel.com/v1/public/`;
     willSendRequest(request: RequestOptions) {
         const { ts, privateKey, apikey } = this.context
 
@@ -30,7 +32,15 @@ class PersonalizationAPI extends RESTDataSource {
         const { offset, limit } = args;
         return await this.get('characters', {
             offset,
-            limit
+            limit,
+        })
+    }
+    async search(args:ICharacterParams) {
+        const { offset, limit, nameStartsWith } = args;
+        return await this.get('characters', {
+            offset,
+            limit,
+            nameStartsWith
         })
     }
     async getCharacter(id:string) {

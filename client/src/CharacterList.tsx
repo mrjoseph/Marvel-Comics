@@ -31,10 +31,19 @@ const CharacterList = ({ error, loading, data: queryData }: GridContainerProps |
     const classes = useStyles();
     if (error) return <p>error ...</p>;
     if (loading) return <Loader />;
-    const { characters: { data: { results }} } = queryData;
+    let obj;
+    if(queryData && queryData.characters) {
+      obj = queryData.characters.data.results;
+     
+    }
+    if(queryData && queryData.search) {
+      obj = queryData.search.data.results;
+     
+    }
+    
     return (
         <Grid container spacing={4}>
-{results.map((characterList:ICharacterList) => {
+{obj.map((characterList:ICharacterList) => {
     const { id, name, description, thumbnail: { path, extension } } = characterList;
     return (
         <Grid item key={id} xs={12} sm={6} md={4}>
