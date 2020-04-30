@@ -13,8 +13,6 @@
 
 ### Tech
 
-I took the opportunity to learn some new tech:
-
 * [Reactjs](https://reactjs.org/) - JavaScript library for building user interfaces!
 * [Apollo](https://www.apollographql.com/docs/apollo-server/) - Open-source, spec-compliant GraphQL server
 * [node.js](http://nodejs.org) - Evented I/O for the backend
