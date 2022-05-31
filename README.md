@@ -43,15 +43,6 @@ $ yarn
 $ yarn dev
 ```
 
-### Todos
-
-* Write Tests. 
-wanted to focus on learning how to combine Apollo with Next.JS and Material UI for this task. Testing libraries I would like to look at in the future include Cypress and React Testing Library.
-* Clean up duplication 
-* Fix server side rendering of query
-* Set up a CI CD and AWS to gain experience and exposure for future projects
- 
-
 
 
 
